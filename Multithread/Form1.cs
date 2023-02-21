@@ -30,6 +30,8 @@ namespace Multithread
 
         private void btnStartThread_Click(object sender, EventArgs e)
         {
+            //clear dataGridView1
+            dataGridView1.Rows.Clear();
             //using class Searcher, method SearchString, filepath get from lbFolderName , searchstring get from tbSearchString
             string[,] results = new Searcher().SearchString(lbFolderName.Text, tbSearchString.Text);
             //set data to dataGridView1, first results[i, 0] to FileName column, second results[i, 1] to StringLine column, third results[i, 2] to StringText column
